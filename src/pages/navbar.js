@@ -18,10 +18,10 @@ const Navbar = () => {
     <header className={styles.header}>
       <div className={styles.logo}>BrandName</div>
       <nav className={`${styles.navbar} ${isMobileMenuOpen ? styles.active : ''}`}>
-        <Link to="/" onClick={closeMobileMenu}>Home</Link>
-        <Link to="/" onClick={closeMobileMenu}>About</Link>
-        <Link to="/" onClick={closeMobileMenu}>Services</Link>
-        <Link to="/" onClick={closeMobileMenu}>Contact</Link>
+        <Link to="/" onClick={closeMobileMenu}>Hem</Link>
+        <Link to="/" onClick={closeMobileMenu}>Galleri</Link>
+        <Link to="/" onClick={closeMobileMenu}>Om oss</Link>
+        <Link to="/" onClick={closeMobileMenu}>Kontakt</Link>
       </nav>
       <div className={styles.hamburger} onClick={toggleMobileMenu}>
         <span></span><span></span><span></span>
