@@ -1,0 +1,72 @@
+.footer {
+    background-color: #f2f2f2;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 60px;
+  }
+  
+  .footerContent {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .footerSection {
+    text-align: center;
+  }
+  
+  .footerSection h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .footerSection p {
+    margin: 4px 0;
+    color: #666;
+  }
+  
+  .footerLine {
+    margin: 30px auto 10px auto;
+    width: 100%;
+    max-width: 900px;
+    height: 1px;
+    border: none;
+    background: linear-gradient(to right, transparent, #ccc, transparent);
+  }
+  
+  .copyRight {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  /* Responsiv layout efter 900px */
+/* Responsiv layout efter 900px */
+@media (min-width: 900px) {
+    .footerContent {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; /* Centrerar innehållet horisontellt */
+      align-items: center; /* Centrerar vertikalt om det behövs */
+      width: 100%;
+      gap: 20vh;
+      margin: 0 auto; /* Centrerar hela footerContent */
+      
+    }
+  
+    .footerSection {
+      margin-left: 50px;
+     margin-bottom: 2vh;
+      
+    }
+  
+    .copyRight {
+      text-align: center;
+      width: 100%;
+      margin-top: 20px; /* Lägg till lite avstånd från innehållet ovan */
+    }
+  }
+  
+  
+  

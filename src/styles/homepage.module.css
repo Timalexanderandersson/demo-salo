@@ -1,0 +1,244 @@
+.homepage {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.videoBackground {
+  position: relative;
+  width: 100%;
+  height: 89vh; /* Gör så att videon alltid täcker hela skärmen */
+  overflow: hidden;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Gör så att videon täcker hela bakgrunden utan att ändra bildens proportioner */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.heroContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrera innehållet horisontellt */
+  justify-content: center; /* Centrera innehållet vertikalt */
+  text-align: center;
+  color: white;
+  width: 100%;
+  max-width: 1200px; /* Sätter en maxbredd för att hålla innehållet centrerat på stora skärmar */
+  padding: 20px;
+  height: 100%; /* Säkerställ att den tar upp hela höjden av videon */
+}
+
+.heroText h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.heroText p {
+  font-size: 1.2rem;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: center; /* Centrerar knapparna horisontellt */
+}
+
+.ctaButtons button {
+  padding: 12px 24px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 2px;
+  width: 20vh; 
+  
+}
+
+.ctaButtons button:hover {
+  background-color: white;
+  color: #000000;
+}
+
+
+/* För att justera placeringen av knapparna beroende på skärmbredd */
+@media (min-width: 900px) {
+  .heroContent {
+    flex-direction: row; /* Byt till horisontell layout på stora skärmar */
+    justify-content: center;
+    align-items: center; /* Centrerar allt innehåll vertikalt */
+    width: 100%;
+    
+  }
+  .ctaButtons button {
+    padding: 12px 24px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 2px;
+    width: 16vh;
+  }
+  .heroContenttwo{
+    display: flex;
+    max-width: 115vh;
+    gap: 20px;
+    flex-direction: row; /* Byt till horisontell layout på stora skärmar */
+    justify-content: center;
+    align-items: center; /* Centrerar allt innehåll vertikalt */
+    text-align: left; /* Justera texten till vänster */
+   
+  }
+  .ctaContainer{
+    display: flex;
+    margin-top: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .heroText {
+    flex: 1;
+    
+    max-width: 50%; /* Sätt en maxbredd på texten så den inte blir för bred */
+    text-align: left; /* Texten är vänsterjusterad */
+    margin-right: 20px; /* Lägg till lite mellanrum mellan text och knappar */
+  }
+
+  .ctaButtons {
+    flex: 1;
+    margin-top: auto;
+    justify-content: flex-start; /* Placera knapparna till höger om texten */
+  }
+}
+
+@media (max-width: 899px) {
+  .heroContent {
+    flex-direction: column;
+    align-items: center; /* Centrera innehållet horisontellt */
+    text-align: center; /* Texten är centrerad */
+  }
+  .heroContenttwo{
+    max-width: 70vh;
+    justify-content: center;
+    align-items: center; /* Centrerar allt innehåll vertikalt */
+    text-align: left; /* Justera texten till vänster */
+   
+  }
+  .ctaContainer{
+    display: flex;
+    margin-top: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ctaButtons {
+    margin-top: 20px;
+    justify-content: center; /* Knapparna centreras på små skärmar */
+  }
+
+  .video {
+    height: 100vh; /* Säkerställer att videon täcker hela skärmen även på mindre skärmar */
+  }
+}
+
+@media (max-width: 420px) {
+
+  .heroText h1 {
+    font-size: 1.5rem; /* Större text på större skärmar */
+  }
+  .heroText p {
+    font-size: 1.1rem; /* Större text på större skärmar */
+  }
+}
+.aboutSection {
+  width: 90vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.aboutText {
+  flex: 1;
+}
+
+.aboutText h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.aboutText p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.aboutImage {
+  flex: 1;
+  width: 100%;
+  max-width: 500px;
+}
+
+.aboutImage img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 900px) {
+  .aboutContent {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .aboutText {
+    padding-right: 40px;
+  }
+
+  .aboutImage {
+    max-width: 500px;
+  }
+}
+

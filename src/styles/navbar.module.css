@@ -1,0 +1,136 @@
+/* Grundläggande styling för header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: absolute; /* Gör navbaren positionerad över videon */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Centrera navbaren horisontellt */
+  width: 80vw; /* Sätt maxbredd till 80% av viewport-bredden */
+  z-index: 10; /* Säkerställer att navbaren är över videon */
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.5), rgba(255,255,255,0));
+  pointer-events: none;
+}
+
+
+/* Styling för logotyp */
+.logo {
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+  text-align: center; /* Centrerar logotypen inom sitt utrymme */
+  width: 100%; /* Gör logotypen lika bred som hela navbaren */
+}
+
+/* Styling för navigationen */
+.navbar {
+  display: flex;
+  justify-content: center; /* Centrerar länkarna horisontellt */
+  align-items: center; /* Centrerar länkarna vertikalt */
+  padding: 0;
+  margin: 0;
+  width: 100%; /* Gör navbaren lika bred som headern */
+}
+
+/* Styling för varje länk */
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  position: relative;
+  padding: 5px 0;
+  margin-right: 20px; /* Lägger till mellanrum mellan länkarna */
+  transition: color 0.3s ease; /* Smooth transition för färgändring */
+}
+
+/* Lägger till en linje under länken när hover */
+.navbar a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navbar a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar a:hover {
+  color: #fff; /* Gör länken vit när man hovrar */
+}
+
+/* Hamburger-meny (för skärmar mindre än 768px) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+/* Skapar en transparent bakgrund när meny är öppen */
+.navbar.active {
+  position: absolute;
+  display: flex;
+  justify-items: center;
+  border-radius: 5px;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%); /* Centrerar den aktiva menyn på skärmen */
+  width: 50vw; /* Sätt maxbredd till 80% av viewport-bredden */
+  background-color: rgba(68, 68, 68, 0.8); /* Transparent bakgrund när meny öppnas */
+  display: block;
+  text-align: center;
+}
+
+.navbar.active a {
+ 
+  display: block;
+  max-width: 10vh;
+  margin: 10px 0; /* Lägger till mellanrum i hamburgermenyn */
+}
+
+/* Gör hamburger-menyn synlig på skärmar mindre än 768px */
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: none; /* Döljer navbarn på mobila skärmar */
+    
+  }
+
+  .hamburger {
+    display: flex; /* Visar hamburger-menyn */
+  }
+
+  /* När navbaren är aktiv och hamburgermenyn är öppen */
+  .navbar.active {
+    display: block; /* Gör navbaren synlig */
+  
+  }
+
+  .navbar.active a {
+    margin: 10px 0; /* Lägger till mellanrum i hamburgermenyn */
+ 
+  }
+}
