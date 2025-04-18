@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from '../styles/homepage.module.css';
 import videos from '../assets/newvideo.mp4';
-import nybild from '../assets/nybild (1).webp'; // ✅ Glöm inte stänga citattecknet här!
-import Navbar from './navbar';
+import nybild from '../assets/nybild (1).webp';
+
 
 const Homepage = () => {
   return (

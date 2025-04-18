@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from '../styles/navbar.module.css';
 
 const Navbar = () => {
@@ -17,16 +18,16 @@ const Navbar = () => {
     <header className={styles.header}>
       <div className={styles.logo}>BrandName</div>
       <nav className={`${styles.navbar} ${isMobileMenuOpen ? styles.active : ''}`}>
-        <a href="#" onClick={closeMobileMenu}>Hem</a>
-        <a href="#" onClick={closeMobileMenu}>Galleri</a>
-        <a href="#" onClick={closeMobileMenu}>Om oss</a>
-        <a href="#" onClick={closeMobileMenu}>Kontakt</a>
+        <Link to="/" onClick={closeMobileMenu}>Home</Link>
+        <Link to="/" onClick={closeMobileMenu}>About</Link>
+        <Link to="/" onClick={closeMobileMenu}>Services</Link>
+        <Link to="/" onClick={closeMobileMenu}>Contact</Link>
       </nav>
       <div className={styles.hamburger} onClick={toggleMobileMenu}>
         <span></span><span></span><span></span>
       </div>
     </header>
   );
-}
+};
 
 export default Navbar;
